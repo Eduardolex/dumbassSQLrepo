@@ -1,3 +1,4 @@
+import "dotenv/config";
 import express from "express";
 import pgPromise from "pg-promise";
 
@@ -6,7 +7,7 @@ app.use(express.json());
 app.use(express.static('.'));
 
 const pgp = pgPromise();
-const db = pgp("postgresql://postgres.bofsstdpnajtahetkxtq:coccast101!@aws-1-us-east-1.pooler.supabase.com:5432/postgres");
+const db = pgp(process.env.DATABASE_URL);
 app.post("/login", async (req, res) => {
   const { email, password } = req.body;
 

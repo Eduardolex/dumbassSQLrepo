@@ -1,6 +1,6 @@
 {
   "name": "web-table",
-    "type": "module",
+  "type": "module",
   "version": "1.0.0",
   "description": "webtable",
   "main": "app.js",
@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "cookie-parser": "^1.4.7",
+    "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "express-session": "^1.18.2",
     "pg-promise": "^12.3.0"
